@@ -1,0 +1,48 @@
+.flexcontainer-top {
+        & button {
+            background-color: $nav-bkg-color;
+            border: 0px;
+
+            &:hover {
+                background-color: darken($nav-bkg-color, 3);
+            }
+        }
+
+    #topnav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+
+        & > .topnav-item {
+            border-left: 1px solid lighten($border-color, 13);
+            padding: 3px 5px;
+
+            &:last-child {
+                border-right: 1px solid lighten($border-color, 13);
+            }
+
+            &:hover {
+                background-color: darken($nav-bkg-color, 3);
+            }
+
+            & .dropdown-menu {
+
+                & .profile-image {
+                    background-color: #2A3F54;
+
+
+                    & > img {
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: -5px;
+                        margin-bottom: 5px;
+                        padding: 8px;
+                        width: 30%;
+                    }
+                }
+
+            }
+        }
+    }
+}

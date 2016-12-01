@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="clientApp">
 <head>
 	<meta charset="UTF-8">
 	<title>SM Template: NGADMIN FLEX - elements</title>
@@ -9,28 +9,51 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/ngadmin-flex.css">
 
 </head>
 
-<body ng-app="clientApp" id="home">
+<body ng-controller="mainCtrl">
 
 
-	<div class="flexcontainer-top">
+	<header class="flexcontainer-top">
 		<div id="toptitle" class="hidden-xs">
-			<h4>Project Name</h4>
+			<h4>ngAdmin FLEX</h4>
 		</div>
+
 		<div id="sidebar-switch">
-			<button class="btn btn-default" title="Toggle sidebar menu"><i class="fa fa-bars"></i></button>
+			<button class="btn btn-default" title="Toggle sidebar menu" ng-click="toggleSidebar()"><i class="fa fa-2x fa-bars"></i></button>
 		</div>
+
 		<div id="topnav">
-			Dropdown
-			<i class="fa fa-caret-down"></i>
+
+			<div class="topnav-item">
+				<button class="btn"><i class="fa fa-bar-chart" style="color:green;font-size:larger;"></i></button>
+			</div>
+
+			<div class="topnav-item">
+				<nav ng-class="['dropdown', 'pull-right', inOpenClass]">
+				  	<button class="btn btn-default" type="button" ng-click="toggleDropdownMenu()">
+				  	  	Marko Marković
+				  	  	<span class="caret"></span>
+				  	</button>
+				  	<ul class="dropdown-menu">
+				  		<li class="profile-image"><img src="/assets/img/user.jpg" class="img-responsive img-rounded"></li>
+				  	  	<li><a href="#">Profile</a></li>
+				  	  	<li><a href="#">Contacts</a></li>
+				  	  	<li><a href="#"></a></li>
+				  	  	<li class="divider"></li>
+				  	  	<li><a href="#" target="_blank">Logout <i class="fa fa-sign-out pull-right"></i></a></li>
+				  	</ul>
+				</nav>
+			</div>
+
 		</div>
-	</div>
+	</header>
 
-	<div class="flexcontainer-main">
+	<main class="flexcontainer-main">
 
-		<aside id="sidebar">
+		<aside id="sidebar" ng-class="hidesidebarClass">
 			<h4>Sidebar Menu</h4>
 
 		</aside>
@@ -41,24 +64,11 @@
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sapiente ipsam optio rerum enim amet,
 				eaque earum dolorum quo nemo expedita, aspernatur debitis consectetur, dicta architecto quas aut vero a.
 			</p>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			<br><br><br><br><br>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur cum fugit mollitia asperiores
-			veniam tempora, amet repellat recusandae pariatur dicta sunt blanditiis alias tenetur minima. Amet, perspiciatis molestiae nisi!
-			<br>--END--
 
 		</section>
 
 		<footer>Cloud j.d.o.o. &copy; 2016</footer>
-	</div>
+	</main>
 
 
 	<!-- Angular app -->

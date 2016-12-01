@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="clientApp">
 <head>
 	<meta charset="UTF-8">
-	<title>SM Template: NGADMIN FLEX - elements</title>
+	<title>Elements</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,11 +12,11 @@
 
 </head>
 
-<body ng-app="clientApp" id="home">
+<body ng-controller="mainCtrl">
 
 
 	<!-- CONTENT -->
-	<main class="container-fluid" ng-controller="mainCtrl">
+	<main class="container">
 
 		<div class="row">
 			<div class="col-sm-12">
@@ -163,17 +163,29 @@
 					<p class="alert alert-info">info</p>
 					<p class="alert alert-warning">warning</p>
 				</div>
-			</div>
+			</div> <!-- /.row -->
 
 
 			<div class="row">
-				<div class="col-sm-12">
-					<h3>ANGULAR</h3>
+				<div class="col-sm-4">
+					<h3>Dropdown</h3>
 
-					<b>myVar=</b> {{myVar}}
-					<p class="alert alert-success" ng-show="myVar">Angular works OK !!!</p>
+					<div class="dropdown">
+					  	<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					  	  	DROPDOWN MENU
+					  	  	<span class="caret"></span>
+					  	</button>
+					  	<ul class="dropdown-menu">
+					  	  	<li><a href="#">Action</a></li>
+					  	  	<li><a href="#">Another action</a></li>
+					  	  	<li><a href="#">Something else here</a></li>
+					  	  	<li class="divider"></li>
+					  	  	<li><a href="#">Separated link</a></li>
+					  	</ul>
+					</div>
 				</div>
-			</div>
+			</div> <!-- /.row -->
+
 
 
 		</div>
