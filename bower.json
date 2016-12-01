@@ -1,0 +1,27 @@
+{
+  "name": "smtemplate-ngadmin-flex",
+  "version": "1.0.0",
+  "authors": [
+    "Saša Mikodanić"
+  ],
+  "description": "Angular+bootstrap admin template with CSS flexbox as basic layout.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "bootstrap template",
+    "angular template",
+    "angularjs template"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.7"
+  }
+}
