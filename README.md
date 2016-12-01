@@ -2,6 +2,7 @@
 Excellent angular+bootstrap admin template with CSS flexbox as basic layout.
 
 ## FEATURES
+- CSS Flexbox as main layout system
 - 100% pure AngularJS template. jQuery not required !!!
 - One top navbar, one collapsible sidebar and content area
 - Three level sidebar (child and grandchild menu)
@@ -15,9 +16,20 @@ Excellent angular+bootstrap admin template with CSS flexbox as basic layout.
 - Tested and works well on Chrome 46+, Firefox 36+, Opera 36+ and MS Edge 20+.
 
 
+## DEVELOPMENT
+Template development is automatized by GULP:
+- .map.css files automatically generated for easier debugging scss files
+- .min.css files are also automatically generated
+
+```bash
+$ git clone git@github.com:smikodanic/smtemplate-ngadmin-flex.git
+$ gulp
+```
+
+
 
 ## License
 
 *Copyright (c) 2016 Saša Mikodanić*
 
-Licensed under [MIT](https://raw.githubusercontent.com/smikodanic/generator-smtemplate/master/LICENSE).
+Licensed under [MIT](https://raw.githubusercontent.com/smikodanic/smtemplate-ngadmin-flex/master/LICENSE).
