@@ -22,6 +22,7 @@ html, body {
     align-content: stretch; //align flex lines
 
     & > #toptitle {
+        // border: 2px solid green;
         text-align: center;
         vertical-align: middle;
         border-right: 1px solid $border-color;
@@ -37,16 +38,17 @@ html, body {
             margin-top: 13px;
             text-shadow: 2px 2px 3px #ccc;
             letter-spacing: 0.13em;
-    }
+        }
 
     }
 
 
     & > #sidebar-switch {
+        // border: 2px solid red;
         text-align: center;
 
         //flex properties
-        order: 1;
+        order: 2;
         flex: 0 0 $sidebar-width * 0.3 + unquote("px");
         align-self: center;
 
@@ -57,12 +59,13 @@ html, body {
 
 
     & > #topnav {
+        // border: 2px solid blue;
         position: relative;
         text-align: right;
         padding-right: 13px;
 
         //flex properties
-        order: 1;
+        order: 3;
         flex: 1 1 500px;
         align-self: center;
     }
@@ -90,7 +93,6 @@ html, body {
         background-color: $nav-bkg-color;
         border-right: 1px solid $border-color;
         color: #111;
-        padding: 21px 8px;
         transition: flex-basis 0.8s, color 0.1s ease;
 
 
@@ -103,15 +105,19 @@ html, body {
             // overflow-y: hidden;
             color: $nav-bkg-color;
             flex-basis: 0px;
-            margin-left: -18px;
+            margin-left: 0px;
             overflow-x: hidden;
+
+            & * {
+                display: none;
+            }
         }
     }
 
     & > #content {
         // border: 2px solid orange;
-        background-color: #F1F3F6;
-        color: #73879C;
+        background-color: $content-bkg-color;;
+        color: $content-text-color;;
         padding: 21px 13px;
         min-height: $content-min-height + unquote("px");
         overflow-x: scroll;

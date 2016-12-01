@@ -50,7 +50,7 @@ gulp.task('scss', function () {
         .pipe(header(banner, {pkg: pkg}))
         .pipe(sourcemaps.write({includeContent: false}))
         .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(autoprefixer())
+        .pipe(autoprefixer({browsers: ['last 2 versions']}))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('css'));
 });

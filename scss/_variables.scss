@@ -1,6 +1,16 @@
-// LAYOUT
-$topnavbar-min-height: 50; //px
+// _layout.scss
+$topnavbar-min-height: 60; //px
 $content-min-height: 750; //px
-$sidebar-width: 210; //px should be <230
 $border-color: #bcbcbc;
-$nav-bkg-color: #f1f1f1;
+$nav-bkg-color: #fff;
+$content-bkg-color: #F1F3F6;
+$content-text-color: #73879C;
+
+
+// _sidebar.scss
+$sidebar-width: 250; //px recommended <250
+$sidebar-z: 1000;
+$sidebar-border-top: 1px solid #ccc;
+$sidebar-menu-bkg-color: #fff;
+$sidebar-link-color: #6a6c6f;
+$sidebar-grandchild-link-color: lighten($sidebar-link-color, 8);

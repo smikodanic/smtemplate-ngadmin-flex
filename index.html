@@ -22,13 +22,15 @@
 		</div>
 
 		<div id="sidebar-switch">
-			<button class="btn btn-default" title="Toggle sidebar menu" ng-click="toggleSidebar()"><i class="fa fa-2x fa-bars"></i></button>
+			<button class="btn btn-default" title="Toggle sidebar menu"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top" ng-click="toggleSidebar()">
+				<i class="fa fa-2x fa-bars"></i>
+			</button>
 		</div>
 
 		<div id="topnav">
 
 			<div class="topnav-item">
-				<button class="btn"><i class="fa fa-bar-chart" style="color:green;font-size:larger;"></i></button>
+				<button class="btn"><i class="fa fa-bar-chart" style="color:lightgreen;font-size:larger;"></i></button>
 			</div>
 
 			<div class="topnav-item">
@@ -54,16 +56,95 @@
 	<main class="flexcontainer-main">
 
 		<aside id="sidebar" ng-class="hidesidebarClass">
-			<h4>Sidebar Menu</h4>
+
+			<div class="menu-section">
+				<h2>Sidebar Menu</h2>
+
+				<ul>
+					<li class="active"> <!-- class="active" => menu opened -->
+						<span class="fa fa-cog"></span>
+						<a ng-click="toggleSidebarChild($event)">Menu 1 <span class="fa fa-chevron-down"></span></a>
+						<ul class="child">
+							<li><a href="#">Child Link</a></li>
+							<li><a href="#">Very long text will apply CSS text-overflow: ellipsis; e.g. text will end with 3 dots.</a></li>
+							<li class="active"><a href="#">Active Page</a></li> <!-- li class="active" => active page -->
+
+							<!-- grandchild menu -->
+							<li class="grandchild active"> <!-- class="grandchild active" => menu opened -->
+								<a ng-click="toggleSidebarGrandChild($event)">Grandchild Menu <span class="fa fa-chevron-down"></span> </a>
+								<ul>
+									<li><a href="#">Grand Child Link</a></li>
+									<li class="active"><a href="#">Active Link</a></li> <!-- active page -->
+									<li><a href="#">Some very long text here bla bla blaaaaaaaaaaaaaaaaaaaaaaa</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</li>
+
+					<li>
+						<i class="fa fa-calculator"></i>
+						<a ng-click="toggleSidebarChild($event)">Menu 2 (child) <span class="fa fa-chevron-down"></span></a>
+						<ul class="child">
+							<li><a href="#">Databases</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Collections</a></li>
+							<li><a href="#">Fields</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<i class="fa fa-link"></i>
+						<a href="#">
+							Just Link
+							<span class="label label-success pull-right">v.1</span>
+						</a>
+					</li>
+
+				</ul>
+
+			</div> <!-- /.menu-section -->
 
 		</aside>
 
 		<section id="content">
-			<h2>Heading 2</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sapiente ipsam optio rerum enim amet,
-				eaque earum dolorum quo nemo expedita, aspernatur debitis consectetur, dicta architecto quas aut vero a.
-			</p>
+
+			<div class="row">
+
+				<div class="col-sm-12">
+					<h2>Heading</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sapiente ipsam optio rerum enim amet,
+						eaque earum dolorum quo nemo expedita, aspernatur debitis consectetur, dicta architecto quas aut vero a.
+					</p>
+
+					<table class="table table-hover">
+						<tr>
+							<th>id</th>
+							<th>First and last name</th>
+							<th>Tekst</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Pero Pertić</td>
+							<td>Zagreb - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident in quibusdam modi illum magni commodi similique ratione consectetur, unde officiis saepe sint, eveniet explicabo totam dolor ipsa. At, cupiditate, dolorum.</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Marko Markitić</td>
+							<td>Rijeka</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Džoko Đokić</td>
+							<td>Beograd</td>
+						</tr>
+					</table>
+				</div>
+
+			</div> <!-- /.row -->
+
+
 
 		</section>
 
