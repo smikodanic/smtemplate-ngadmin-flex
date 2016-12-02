@@ -30,7 +30,10 @@
 		<div id="topnav">
 
 			<div class="topnav-item">
-				<button class="btn"><i class="fa fa-bar-chart" style="color:lightgreen;font-size:larger;"></i></button>
+				<button class="btn"><i class="fa fa-envelope-o"></i></button>
+			</div>
+			<div class="topnav-item">
+				<button class="btn"><i class="fa fa-commenting-o"></i></button>
 			</div>
 
 			<div class="topnav-item">
@@ -45,7 +48,7 @@
 				  	  	<li><a href="#">Contacts</a></li>
 				  	  	<li><a href="#"></a></li>
 				  	  	<li class="divider"></li>
-				  	  	<li><a href="#" target="_blank">Logout <i class="fa fa-sign-out pull-right"></i></a></li>
+				  	  	<li><a href="#" target="_blank">Logout <i class="fa fa-sign-out go-right-15"></i></a></li>
 				  	</ul>
 				</nav>
 			</div>
@@ -58,52 +61,106 @@
 		<aside id="sidebar" ng-class="hidesidebarClass">
 
 			<div class="menu-section">
-				<h2>Sidebar Menu</h2>
+				<h2>Template</h2>
 
 				<ul>
-					<li class="active"> <!-- class="active" => menu opened -->
-						<span class="fa fa-cog"></span>
-						<a ng-click="toggleSidebarChild($event)">Menu 1 <span class="fa fa-chevron-down"></span></a>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
 						<ul class="child">
-							<li><a href="#">Child Link</a></li>
-							<li><a href="#">Very long text will apply CSS text-overflow: ellipsis; e.g. text will end with 3 dots.</a></li>
-							<li class="active"><a href="#">Active Page</a></li> <!-- li class="active" => active page -->
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.menu-section -->
 
-							<!-- grandchild menu -->
+			<div class="menu-section">
+				<h2>Menu Levels</h2>
+
+				<ul>
+
+					<!-- ONE LEVEL MENU -->
+					<li> <!-- class="active" => menu opened -->
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-calculator"></i>
+							One Level Menu
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="#">Link A</a></li>
+							<li class="active"><a href="#">Active Link</a></li> <!-- li class="active" => active page -->
+							<li class="divider"></li>
+							<li><a href="#">Link B</a></li>
+							<li><a href="#">Link C - Very long text will apply CSS text-overflow: ellipsis; e.g. text will end with 3 dots.</a></li>
+							<li><a href="#">Link D</a></li>
+						</ul>
+					</li>
+					<!-- /ONE LEVEL MENU -->
+
+					<!-- MULTILEVEL MENU -->
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-sitemap"></i>
+							Multilevel Menu
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="#">Simple Link</a></li>
+
+							<!-- grandchild menu 1 -->
 							<li class="grandchild active"> <!-- class="grandchild active" => menu opened -->
-								<a ng-click="toggleSidebarGrandChild($event)">Grandchild Menu <span class="fa fa-chevron-down"></span> </a>
+								<a ng-click="toggleSidebarGrandChild($event)">Grandchild Menu 1 <span class="fa fa-angle-down"></span></a>
 								<ul>
-									<li><a href="#">Grand Child Link</a></li>
-									<li class="active"><a href="#">Active Link</a></li> <!-- active page -->
-									<li><a href="#">Some very long text here bla bla blaaaaaaaaaaaaaaaaaaaaaaa</a></li>
+									<li><a href="#">Link 1.1</a></li>
+									<li><a href="#">Link 1.2</a></li>
 								</ul>
 							</li>
 
+							<!-- grandchild menu 2 -->
+							<li class="grandchild">
+								<a ng-click="toggleSidebarGrandChild($event)">Grandchild Menu 2 <span class="fa fa-angle-down"></span></a>
+								<ul>
+									<li><a href="#">Link 2.1</a></li>
+									<li><a href="#">Link 2.2</a></li>
+								</ul>
+							</li>
 						</ul>
 					</li>
+					<!-- /MULTILEVEL MENU -->
 
-					<li>
-						<i class="fa fa-calculator"></i>
-						<a ng-click="toggleSidebarChild($event)">Menu 2 (child) <span class="fa fa-chevron-down"></span></a>
-						<ul class="child">
-							<li><a href="#">Databases</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Collections</a></li>
-							<li><a href="#">Fields</a></li>
-						</ul>
-					</li>
 
+					<!-- LINK -->
 					<li>
-						<i class="fa fa-link"></i>
 						<a href="#">
+							<i class="fa fa-link"></i>
 							Just Link
 							<span class="label label-success pull-right">v.1</span>
 						</a>
 					</li>
+					<!-- /LINK -->
 
 				</ul>
 
 			</div> <!-- /.menu-section -->
+
+
+			<div class="menu-section">
+				<h2>Layouts</h2>
+
+				<ul>
+					<li>
+						<a href="long-sidebar.html" target="_blank">
+							<i class="fa fa-link"></i>
+							Long Sidebar
+							<span class="badge pull-right" style="background-color:magenta"><i class="fa fa-exclamation-triangle"></i></span>
+						</a>
+					</li>
+				</ul>
+			</div><!-- /.menu-section -->
 
 		</aside>
 
@@ -113,42 +170,17 @@
 
 				<div class="col-sm-12">
 					<h2>Heading</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sapiente ipsam optio rerum enim amet,
-						eaque earum dolorum quo nemo expedita, aspernatur debitis consectetur, dicta architecto quas aut vero a.
-					</p>
 
-					<table class="table table-hover">
-						<tr>
-							<th>id</th>
-							<th>First and last name</th>
-							<th>Tekst</th>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>Pero Pertić</td>
-							<td>Zagreb - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident in quibusdam modi illum magni commodi similique ratione consectetur, unde officiis saepe sint, eveniet explicabo totam dolor ipsa. At, cupiditate, dolorum.</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Marko Markitić</td>
-							<td>Rijeka</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Džoko Đokić</td>
-							<td>Beograd</td>
-						</tr>
-					</table>
+
 				</div>
 
 			</div> <!-- /.row -->
 
 
-
 		</section>
 
 		<footer>Cloud j.d.o.o. &copy; 2016</footer>
+
 	</main>
 
 

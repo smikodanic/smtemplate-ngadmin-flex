@@ -1,76 +1,72 @@
 #sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 
-    & > .menu-section {
-        //flex item properties
-        flex: 0 0 $sidebar-width + unquote("px");
+    & .menu-section {
+        // border: 1px solid red;
+        display: block;
 
         & > h1,h2,h3,h4,h5 {
-            font-size: 21px;
-            color: darken($sidebar-link-color, 5);;
-            margin-bottom: 8px;
-            text-align: center;
+            font-size: 15px;
+            color: lighten($sidebar-link-color, 5);
+            margin: 21px 8px 8px 8px;
+            text-transform: uppercase;
         }
 
         & > ul {
-            // border: 1px solid green;
+            // border: 1px solid Silver;
+            padding-left: 0;
             list-style: none;
 
-            & > li {
-                border-bottom: 1px solid $border-color;
-                position: relative;
-                margin-left: -40px;
-                background-color: darken($sidebar-menu-bkg-color, 3);
-                padding: 13px 0px;
 
-                &:first-child {
-                    border-top: 1px solid $border-color;
-                }
+            & > li {
+                // border: 1px solid green;
+                background-color: $sidebar-menu-bkg-color;
+                position: relative; //required to prevent overlaping
 
                 &:hover {
-                    background-color: lighten($sidebar-menu-bkg-color, 3);
+                    background-color: darken($sidebar-menu-bkg-color, 3);
                     cursor: pointer;
                 }
 
 
                 // <ul class="active"> => opened child menu
                 &.active {
-                    background-color: lighten($sidebar-menu-bkg-color, 5);
+                    background-color: $sidebar-menu-bkg-active-color;
 
                     & > ul.child {
+                        display: block;
                         opacity: 1; //animate
                         height: 100%; //animate
                     }
 
                     & > a {
-                        & > span.fa.fa-chevron-down {
+
+                        & > span.fa {
                             transform: rotate(180deg);
                             transition: transform 0.8s ease;
                         }
                     }
                 }
 
-                & > .fa {
-                    position: relative;
-                    left: 5px;
-                    color: darken($sidebar-link-color, 50);
-                    font-size: larger;
-                    margin-right: 21px;
-                }
-
-
                 & > a {
+                    // border: 1px solid silver;
+                    display: block;
+                    padding: 8px;
                     color: $sidebar-link-color;
-                    font: 15px Verdana;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    margin-left: -8px;
+                    font-size: 16px;
+                    font-family: Open Sans,Helvetica,Arial,sans-serif;
+                    font-weight: 500;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: lighten($sidebar-link-color, 50);
+                    }
+
+                    & > i {
+                        margin-right: 8px;
+                    }
 
 
                     & > span {
-                        margin: 5px 8px;
                         float: right;
                     }
                 }
@@ -78,96 +74,74 @@
 
                 /*** CHILD MENU ***/
                 & > ul.child {
-                    // border:1px solid navy;
+                    // border: 1px solid orange;
+                    display: none;
+                    padding-left: 21px;
                     list-style: none;
                     opacity: 0; //animate
-                    height: 0px; //animate
-                    transition: all 0.4s ease;
+                    height: 0; //animate
+                    transition: all 0.4s ease; //animation
 
 
                     & > li {
                         // border: 1px solid red;
+                        max-width: $sidebar-width - 25 + unquote("px"); //firefox requires -  because of elipses
                         position: relative;
-                        left: -21px;
-                        max-width: $sidebar-width - 50 + unquote("px");
-                        margin: 8px 0px;
-                        /*shorten text with 3 dots: ellipses*/
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-
-                        &:last-child {
-                            margin-bottom: 0px;
-                        }
 
                         &.active {
+
                             & > a {
-                                color: darken($sidebar-link-color, 5);
-                                font-weight: bold;
+                                color: lighten($sidebar-link-color, 50);
                             }
                         }
 
                         &.divider {
                             height: 1px;
-                            background: $border-color;
-                            border-bottom: 1px solid $sidebar-border-top;
-                            margin-left: -8px;
+                            background: $sidebar-link-color;
+                            border-bottom: $sidebar-link-color;
+                            margin: 5px 0px;
                         }
 
                         & > a {
+                            // border: 1px solid green;
+                            display: block;
+                            padding: 5px;
                             color: $sidebar-link-color;
-                            font: 15px Verdana;
+                            font-size: 15px;
+                            font-family: Open Sans,Helvetica,Arial,sans-serif;
                             font-weight: 500;
-                            padding: 0px;
+                            text-decoration: none;
+                            /*shorten text with 3 dots: ellipses*/
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+
+                            //chevron arrow
+                            & > span {
+                                position: absolute;
+                                right: 13px;
+                            }
+
+                            &:hover {
+                                color: lighten($sidebar-link-color, 50);
+                            }
 
                         }
 
                         /*** GRANDCHILD MENU ***/
                         &.grandchild { //li.grandchild
-                            & > a {
-                                color: $sidebar-grandchild-link-color;
-                            }
 
                             & > ul {
-                                // border: 1px solid red;
-                                list-style-type: square;
-                                margin-left: 13px;
-                                padding-left: 0px;
-                                width: $sidebar-width - 30 + unquote("px");
-                                background-color: $sidebar-menu-bkg-color;
+                                // border: 1px solid orange;
+                                list-style-type: none;
+                                padding-left: 21px;
+                                background-color: $sidebar-menu-bkg-active-color;
                                 opacity: 0; //animate
                                 height: 0px; //animate
-                                transition: all 0.4s ease;
+                                transition: all 0.4s ease; //animation
 
                                 & > li {
                                     // border: 1px solid green;
-                                    /*shorten text with 3 dots: ellipses*/
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-
-                                    &:before {
-                                        background: $sidebar-grandchild-link-color;
-                                        bottom: auto;
-                                        content: "";
-                                        height: 8px;
-                                        left: 0px;
-                                        margin-top: 5px;
-                                        position: absolute;
-                                        right: auto;
-                                        width: 8px;
-                                        z-index: 1;
-                                        border-radius: 50%;
-                                    }
-
-                                    &:after {
-                                        content: "";
-                                        position: absolute;
-                                        bottom: 0;
-                                        left: 3px;
-                                        top: 21px;
-                                        border-left: 1px solid $sidebar-grandchild-link-color;
-                                    }
 
                                     &.active {
                                         & > a {
@@ -177,7 +151,34 @@
                                     }
 
                                     & > a {
-                                        color: lighten($sidebar-link-color, 5);
+                                        // border: 1px solid red;
+                                        display: block;
+                                        padding: 3px;
+                                        color: $sidebar-link-color;
+                                        text-decoration: none;
+                                        /*shorten text with 3 dots: ellipses*/
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+
+                                        &:hover {
+                                            color: lighten($sidebar-link-color, 50);
+                                        }
+
+                                        &:before { //circle
+                                            content: "-";
+                                            position: absolute;
+                                            left: 13px;
+                                        }
+
+                                        &:after { //line
+                                            content: "";
+                                            position: absolute;
+                                            left: 13px;
+                                            border-left: 1px solid darken($sidebar-link-color, 3);
+                                            height: 15px;
+                                            padding: 10px;
+                                        }
                                     }
                                 }
 
@@ -191,7 +192,7 @@
                                     height: 100%; //animate
                                 }
 
-                                & > a > span.fa.fa-chevron-down {
+                                & > a > span.fa {
                                     transform: rotate(180deg);
                                     transition: transform 0.8s ease;
                                 }

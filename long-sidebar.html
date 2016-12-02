@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html ng-app="clientApp">
+<head>
+	<meta charset="UTF-8">
+	<title>SM Template: NGADMIN FLEX - elements</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/ngadmin-flex.css">
+
+</head>
+
+<body ng-controller="mainCtrl">
+
+
+	<header class="flexcontainer-top">
+		<div id="toptitle" class="hidden-xs">
+			<h4>ngAdmin FLEX</h4>
+		</div>
+
+		<div id="sidebar-switch">
+			<button class="btn btn-default" title="Toggle sidebar menu"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top" ng-click="toggleSidebar()">
+				<i class="fa fa-2x fa-bars"></i>
+			</button>
+		</div>
+
+		<div id="topnav">
+
+			<div class="topnav-item">
+				<button class="btn"><i class="fa fa-envelope-o"></i></button>
+			</div>
+			<div class="topnav-item">
+				<button class="btn"><i class="fa fa-commenting-o"></i></button>
+			</div>
+
+			<div class="topnav-item">
+				<nav ng-class="['dropdown', 'pull-right', inOpenClass]">
+				  	<button class="btn btn-default" type="button" ng-click="toggleDropdownMenu()">
+				  	  	Marko Marković
+				  	  	<span class="caret"></span>
+				  	</button>
+				  	<ul class="dropdown-menu">
+				  		<li class="profile-image"><img src="./assets/img/user.jpg" class="img-responsive img-rounded"></li>
+				  	  	<li><a href="#">Profile</a></li>
+				  	  	<li><a href="#">Contacts</a></li>
+				  	  	<li><a href="#"></a></li>
+				  	  	<li class="divider"></li>
+				  	  	<li><a href="#" target="_blank">Logout <i class="fa fa-sign-out go-right-15"></i></a></li>
+				  	</ul>
+				</nav>
+			</div>
+
+		</div>
+	</header>
+
+	<main class="flexcontainer-main">
+
+		<aside id="sidebar" ng-class="hidesidebarClass">
+
+			<div class="menu-section">
+				<h2>Template</h2>
+
+				<ul>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.menu-section -->
+
+			<div class="menu-section">
+				<h2>Template</h2>
+
+				<ul>
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-cog"></i>
+							Basic Elements
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="form.html">Form Elements</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.menu-section -->
+
+			<div class="menu-section">
+				<h2>Menu Levels</h2>
+
+				<ul>
+
+					<!-- ONE LEVEL MENU -->
+					<li> <!-- class="active" => menu opened -->
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-calculator"></i>
+							One Level Menu
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="#">Link A</a></li>
+							<li class="active"><a href="#">Active Link</a></li> <!-- li class="active" => active page -->
+							<li class="divider"></li>
+							<li><a href="#">Link B</a></li>
+							<li><a href="#">Link C - Very long text will apply CSS text-overflow: ellipsis; e.g. text will end with 3 dots.</a></li>
+							<li><a href="#">Link D</a></li>
+						</ul>
+					</li>
+					<!-- /ONE LEVEL MENU -->
+
+					<!-- MULTILEVEL MENU -->
+					<li>
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-sitemap"></i>
+							Multilevel Menu
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="#">Link</a></li>
+
+							<!-- grandchild menu 1 -->
+							<li class="grandchild active"> <!-- class="grandchild active" => menu opened -->
+								<a ng-click="toggleSidebarGrandChild($event)">Grandchild Menu 1 <span class="fa fa-angle-down"></span></a>
+								<ul>
+									<li><a href="#">Link 1.1</a></li>
+									<li><a href="#">Link 1.2</a></li>
+								</ul>
+							</li>
+
+							<!-- grandchild menu 2 -->
+							<li class="grandchild">
+								<a ng-click="toggleSidebarGrandChild($event)">Grandchild Menu 2 <span class="fa fa-angle-down"></span></a>
+								<ul>
+									<li><a href="#">Link 2.1</a></li>
+									<li><a href="#">Link 2.2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<!-- /MULTILEVEL MENU -->
+
+
+					<!-- LINK -->
+					<li>
+						<a href="#">
+							<i class="fa fa-link"></i>
+							Just Link
+							<span class="label label-success pull-right">v.1</span>
+						</a>
+					</li>
+					<!-- /LINK -->
+
+				</ul>
+
+			</div> <!-- /.menu-section -->
+
+		</aside>
+
+		<section id="content">
+
+			<div class="row">
+
+				<div class="col-sm-12">
+					<h2>Heading</h2>
+
+
+				</div>
+
+			</div> <!-- /.row -->
+
+
+		</section>
+
+		<footer>Cloud j.d.o.o. &copy; 2016</footer>
+
+	</main>
+
+
+	<!-- Angular app -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+	<script src="ng.js"></script>
+
+</body>
+</html>

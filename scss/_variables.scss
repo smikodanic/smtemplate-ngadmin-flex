@@ -1,16 +1,17 @@
 // _layout.scss
-$topnavbar-min-height: 60; //px
+$topnavbar-min-height: 50; //px
+$topnavbar-position: fixed; //fixed | absolute
 $content-min-height: 750; //px
 $border-color: #bcbcbc;
-$nav-bkg-color: #fff;
-$content-bkg-color: #F1F3F6;
+$nav-bkg-color: #F1F3F6;
+$content-bkg-color: #FFF;
 $content-text-color: #73879C;
 
 
 // _sidebar.scss
-$sidebar-width: 250; //px recommended <250
+$sidebar-width: 200; //px recommended <300
 $sidebar-z: 1000;
 $sidebar-border-top: 1px solid #ccc;
-$sidebar-menu-bkg-color: #fff;
-$sidebar-link-color: #6a6c6f;
-$sidebar-grandchild-link-color: lighten($sidebar-link-color, 8);
+$sidebar-menu-bkg-color: #21252E;
+$sidebar-menu-bkg-active-color: lighten($sidebar-menu-bkg-color, 5);
+$sidebar-link-color: #515C70;
