@@ -29,13 +29,20 @@ html, body {
         color: #2A3F54;
         background-color: darken($nav-bkg-color, 1);
 
-        //flex properties
+        //flex item properties
         order: 1;
         flex: 0 0 $sidebar-width + unquote("px");
         align-self: stretch;
 
+        //flex container properties
+        display: flex;
+        flex-direction: row;
+        justify-content: center; //horizontal align of items
+        align-items: center; //vertical align of items
+        align-content: center; //align flex lines
+
+
         & > h1,h2,h3,h4 {
-            margin-top: 13px;
             text-shadow: 2px 2px 3px #ccc;
             letter-spacing: 0.13em;
         }
