@@ -1,6 +1,9 @@
 # SM Template: ngAdmin - flex
 Excellent angular+bootstrap admin template with CSS flexbox as basic layout.
 
+## DEMO
+[https://smikodanic.github.io/smtemplate-ngadmin-flex/](https://smikodanic.github.io/smtemplate-ngadmin-flex/)
+
 ## FEATURES
 - CSS Flexbox as main layout system
 - 100% pure AngularJS template. jQuery not required !!!
