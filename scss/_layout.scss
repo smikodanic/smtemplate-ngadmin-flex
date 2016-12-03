@@ -125,9 +125,6 @@ body {
     & > #content {
         // border: 2px solid orange;
         margin-right: 5px;
-        background-color: $content-bkg-color;;
-        color: $content-text-color;;
-        padding: 21px 13px;
         min-height: $content-min-height + unquote("px");
         // overflow-x: scroll;
 

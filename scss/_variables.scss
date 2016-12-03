@@ -4,8 +4,6 @@ $topnavbar-position: fixed; //fixed | absolute
 $content-min-height: 750; //px
 $border-color: #bcbcbc;
 $nav-bkg-color: #F1F3F6;
-$content-bkg-color: #FFF;
-$content-text-color: #73879C;
 
 
 // _sidebar.scss
@@ -15,3 +13,9 @@ $sidebar-border-top: 1px solid #ccc;
 $sidebar-menu-bkg-color: #21252E;
 $sidebar-menu-bkg-active-color: lighten($sidebar-menu-bkg-color, 5);
 $sidebar-link-color: #515C70;
+
+
+// _content.scss
+$content-bkg-color: #FFF;
+$content-text-color1: #666;
+$content-text-color2: #73879C;

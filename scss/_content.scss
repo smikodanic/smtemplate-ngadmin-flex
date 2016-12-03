@@ -1,0 +1,48 @@
+#content {
+    background-color: $content-bkg-color;
+    color: $content-text-color1;
+    padding: 0;
+
+    & > div.container, div.container-fluid {
+
+        & > header { //this is .row
+            // border: 1px solid orange;
+            max-height: 80px;
+            padding: 0px;
+            background: linear-gradient(darken($content-bkg-color, 8), $content-bkg-color, darken($content-bkg-color, 5));
+
+            & > #heading {
+                & h1,h2,h3 {
+                    // border: 1px solid gray;
+                    font-size: 21px;
+                    font-weight: 500;
+                    margin: 8px 0px;
+                }
+
+                & p {
+                    font: 12px Verdana;
+                    color: lighten($content-text-color1, 8);
+                }
+            }
+
+            & .breadcrumb {
+                // border: 1px solid red;
+                position: absolute;
+                top: 21px;
+                bottom: 0px;
+                right: 0;
+                z-index: 1000;
+                font-size: smaller;
+                background: transparent;
+            }
+
+        }
+
+        & > section { //this is also .row
+            // border:1px solid red;
+            margin-top: 21px;
+            color: $content-text-color2;
+
+        }
+    }
+}
