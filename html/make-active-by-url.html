@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html ng-app="clientApp">
+<head>
+	<meta charset="UTF-8">
+	<title>ngADMIN FLEX - Buttons</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/ngadmin-flex.css">
+
+</head>
+
+<body ng-controller="mainCtrl">
+
+
+	<header class="flexcontainer-top">
+		<div id="toptitle" class="hidden-xs">
+			<h4><i class="fa fa-paw"></i> ngAdmin FLEX</h4>
+		</div>
+
+		<div id="sidebar-switch">
+			<button class="btn btn-default" title="Toggle sidebar menu"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top" ng-click="toggleSidebar()">
+				<i class="fa fa-2x fa-bars"></i>
+			</button>
+		</div>
+
+		<div id="topnav">
+
+			<div class="topnav-item">
+				<button class="btn"><i class="fa fa-envelope-o"></i></button>
+			</div>
+			<div class="topnav-item">
+				<button class="btn"><i class="fa fa-commenting-o"></i></button>
+			</div>
+
+			<div class="topnav-item">
+				<nav ng-class="['dropdown', 'pull-right', inOpenClass]">
+				  	<button class="btn btn-default" type="button" ng-click="toggleDropdownMenu()">
+				  	  	Marko Marković
+				  	  	<span class="caret"></span>
+				  	</button>
+				  	<ul class="dropdown-menu">
+				  		<li class="profile-image"><img src="../assets/img/user.jpg" class="img-responsive img-rounded"></li>
+				  	  	<li><a href="#">Profile</a></li>
+				  	  	<li><a href="#">Contacts</a></li>
+				  	  	<li><a href="#"></a></li>
+				  	  	<li class="divider"></li>
+				  	  	<li><a href="#" target="_blank">Logout <i class="fa fa-sign-out go-right-15"></i></a></li>
+				  	</ul>
+				</nav>
+			</div>
+
+		</div>
+	</header>
+
+	<main class="flexcontainer-main">
+
+		<aside id="sidebar" ng-class="hidesidebarClass">
+
+			<div class="menu-section">
+				<h2>Menu Section</h2>
+
+				<ul auto-active>
+
+					<!-- MENU 1-->
+					<li> <!-- class="active" => menu opened -->
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-calculator"></i>
+							Menu 1
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="#/spa-path">SPA Path</a></li> <!-- li class="active" => active page by URL => see ng.js directive-->
+							<li><a href="#/one">Link 1</a></li>
+							<li><a href="#/two">Link 2</a></li>
+							<li><a href="#/three/best/tools">Link 3 - Best Tools</a></li>
+						</ul>
+					</li>
+
+
+					<!-- MENU 2-->
+					<li> <!-- class="active" => menu opened -->
+						<a ng-click="toggleSidebarChild($event)">
+							<i class="fa fa-calculator"></i>
+							Menu 2
+							<span class="fa fa-chevron-down"></span>
+						</a>
+						<ul class="child">
+							<li><a href="#/link-a">link A</a></li>
+							<li><a href="#/b">Link B</a></li>
+
+						</ul>
+					</li>
+
+					<!-- LINK -->
+					<li class="">
+						<a href="#/just-link">
+							<i class="fa fa-link"></i>
+							Just Link
+							<span class="label label-success pull-right">v.1</span>
+						</a>
+					</li>
+
+				</ul>
+
+			</div> <!-- /.menu-section -->
+
+		</aside>
+
+
+		<!-- Content -->
+		<section id="content">
+			<div class="container-fluid">
+
+				<header class="row">
+					<div class="col-sm-7" id="heading">
+						<h2>Auto Active Link</h2>
+						<p>
+							Retain menu link in active state by using <b>auto-active</b> directive. See ng.js file.
+						</p>
+					</div>
+					<div class="col-sm-5" id="page_links">
+						<ol class="breadcrumb">
+						  	<li><a href="/">Home</a></li>
+						  	<li class="active">Buttons</li>
+						</ol>
+					</div>
+				</header> <!-- /header -->
+
+				<section class="row main-content">
+					<div class="col-sm-12">
+						This is single page app example. Sidebar menu link will have <b>class="active"</b> because of URL (see URL part after #).
+						<br>Click on sidebar links, then refresh browser. Link will stay in active state.
+						<br>
+						<br>Put directive &lt;ul <b>auto-active</b>&gt; inside UL tag.
+					</div>
+				</section>
+
+			</div> <!-- /.container-fluid -->
+		</section>
+		<!-- /section#content -->
+
+		<footer>Cloud j.d.o.o. &copy; 2016</footer>
+
+	</main>
+
+
+	<!-- Angular app -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min.js"></script>
+	<script src="../js/ng.js"></script>
+
+</body>
+</html>

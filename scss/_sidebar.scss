@@ -39,6 +39,7 @@
                     }
 
                     & > a {
+                        color: lighten($sidebar-link-color, 50);
 
                         & > span.fa {
                             transform: rotate(180deg);

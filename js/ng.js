@@ -1,4 +1,4 @@
-/*global angular, document*/
+/*global angular, window, document*/
 var clientApp = angular.module('clientApp', [
     'ui.bootstrap'
 ]);
@@ -64,7 +64,49 @@ clientApp.controller('mainCtrl', function ($scope, $timeout) {
     };
 
 
-
-
-
 });
+
+
+//<ul auto-active> ... </ul> -make link 'active' automatically by URL
+clientApp.directive('autoActive', ['$location', function ($location) {
+    'use strict';
+
+    return {
+        restrict: 'A',
+        scope: false,
+        link: function (scope, element) {
+
+            function setActive() {
+
+                //$location.path() is for single page app
+                var path = $location.path();
+                // console.log('path: ' + path);
+
+                if (path) {
+                    angular.forEach(element.find('li'), function (li) {
+
+                        var anchor = li.querySelector('a');
+                        // console.log('li a: ', anchor.href);
+
+                        var regPattern = path + '(?=\\?|$)';
+                        var reg = new RegExp(regPattern, 'i');
+
+                        if (anchor.href.match(reg)) {
+                            angular.element(document.querySelectorAll('li')).removeClass('active');
+                            angular.element(li).addClass('active'); //coloring link
+                            angular.element(li).parent().parent().addClass('active'); //open menu
+                        } else {
+                            angular.element(li).removeClass('active');
+                        }
+
+                    });
+                }
+            }
+
+            setActive();
+
+            scope.$on('$locationChangeSuccess', setActive);
+        }
+    };
+
+}]);
