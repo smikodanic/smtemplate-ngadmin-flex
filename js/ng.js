@@ -1,5 +1,7 @@
 /*global angular, document*/
-var clientApp = angular.module('clientApp', []);
+var clientApp = angular.module('clientApp', [
+    'ui.bootstrap'
+]);
 
 
 /* ------ CONTROLLERS ----- */
@@ -54,4 +56,15 @@ clientApp.controller('mainCtrl', function ($scope, $timeout) {
             angular.element($event.currentTarget).parent('li').addClass('active');
         }
     };
+
+
+    //*** ELEMENTS ***
+    $scope.dismissAlert = function () {
+        $scope.isAlertHidden = true;
+    };
+
+
+
+
+
 });

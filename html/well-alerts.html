@@ -2,7 +2,7 @@
 <html ng-app="clientApp">
 <head>
 	<meta charset="UTF-8">
-	<title>ngADMIN FLEX - Buttons</title>
+	<title>ngADMIN FLEX - Tabs</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -106,30 +106,62 @@
 
 				<header class="row">
 					<div class="col-sm-7" id="heading">
-						<h2>Buttons</h2>
+						<h2>Tabs</h2>
 						<p>
-							Responsive bootstrap buttons.
+							Responsive, bootstrap Tabs.
 						</p>
 					</div>
 					<div class="col-sm-5" id="page_links">
 						<ol class="breadcrumb">
 						  	<li><a href="/">Home</a></li>
-						  	<li class="active">Buttons</li>
+						  	<li class="active">Tabs</li>
 						</ol>
 					</div>
 				</header> <!-- /header -->
 
-				<section class="row main-content">
-					<div class="col-sm-7">
-						<a href="#" class="btn btn-default">Default</a>
-						<a href="#" class="btn btn-primary">Primary</a>
-						<a href="#" class="btn btn-success">Success</a>
-						<a href="#" class="btn btn-info">Info</a>
-						<a href="#" class="btn btn-warning">Warning</a>
-						<a href="#" class="btn btn-danger">Danger</a>
-						<a href="#" class="btn btn-link">Link</a>
+
+				<div class="row main-content">
+					<div class="col-sm-4">
+						<h3>well-sm</h3>
+						<div class="well well-sm">
+						  This is a small well.
+						</div>
 					</div>
-				</section>
+
+					<div class="col-sm-4">
+						<h3>well</h3>
+						<div class="well">
+						  This is a normal well.
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<h3>well-lg</h3>
+						<div class="well well-lg">
+						  This is a large well.
+						</div>
+					</div>
+				</div>
+
+				<div class="row main-content">
+					<div class="col-sm-4">
+					<h3>Alerts</h3>
+
+					<p class="alert">just alert</p>
+					<p class="alert alert-success">success</p>
+					<p class="alert alert-info">info</p>
+					<p class="alert alert-warning">warning</p>
+					<p class="alert alert-danger">danger</p>
+
+					<hr>
+
+					<div uib-alert ng-class="'alert-' + (alert.type || 'success')" close="dismissAlert()" ng-hide="isAlertHidden">closing alert</div>
+				</div>
+				</div>
+
+
+
+
 
 			</div> <!-- /.container-fluid -->
 		</section>
@@ -144,6 +176,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min.js"></script>
+
 	<script src="/js/ng.js"></script>
 
 </body>
