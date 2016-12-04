@@ -1,0 +1,32 @@
+#login-register {
+	background-color: $content-bkg-color !important;
+	padding: 34px 0px;
+
+	& h4 {
+        // border: 1px solid red;
+        line-height: 34px;
+        margin-left: 21px;
+		text-transform: uppercase;
+		color: #888;
+        font-family: Roboto;
+		text-shadow: 2px 2px #fcfcfc;
+
+        & .fa {
+            font-size: 34px;
+        }
+	}
+
+	& form {
+		background: linear-gradient(to top, #CCC, $content-bkg-color, #CCC);
+		padding: 13px;
+		border: 1px solid #ccc;
+	}
+
+	.centered {
+		text-align: center;
+	}
+
+	& .msg {
+		margin: 5px 13px;
+	}
+}
