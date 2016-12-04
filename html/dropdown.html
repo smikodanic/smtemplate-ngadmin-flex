@@ -2,7 +2,7 @@
 <html ng-app="clientApp">
 <head>
 	<meta charset="UTF-8">
-	<title>ngADMIN FLEX - Well, Alerts</title>
+	<title>ngADMIN FLEX - Dropdown</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -106,62 +106,81 @@
 
 				<header class="row">
 					<div class="col-sm-7" id="heading">
-						<h2>Well and alerts</h2>
+						<h2>Dropdown</h2>
 						<p>
-							Responsive, bootstrap well and alerts.
+							Responsive bootstrap dropdown button.
 						</p>
 					</div>
 					<div class="col-sm-5" id="page_links">
 						<ol class="breadcrumb">
 						  	<li><a href="/">Home</a></li>
-						  	<li class="active">Well and alerts</li>
+						  	<li class="active">Dropdown</li>
 						</ol>
 					</div>
 				</header> <!-- /header -->
 
-
-				<div class="row main-content">
+				<section class="row main-content">
 					<div class="col-sm-4">
-						<h3>well-sm</h3>
-						<div class="well well-sm">
-						  This is a small well.
-						</div>
+
+						<!-- Single button -->
+    					<div class="btn-group" uib-dropdown is-open="true">
+    						<button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle>
+    							Button dropdown <span class="caret"></span>
+    						</button>
+    						<ul class="dropdown-menu" uib-dropdown-menu>
+    							<li role="menuitem"><a href="#">Action</a></li>
+    							<li role="menuitem"><a href="#">Another action</a></li>
+    							<li role="menuitem"><a href="#">Something else here</a></li>
+    							<li class="divider"></li>
+    							<li role="menuitem"><a href="#">Separated link</a></li>
+    						</ul>
+    					</div>
+						<!-- /Single button -->
+
 					</div>
 
+
 					<div class="col-sm-4">
-						<h3>well</h3>
-						<div class="well">
-						  This is a normal well.
-						</div>
+
+						<!-- Split button -->
+    					<div class="btn-group" uib-dropdown>
+    					  	<button type="button" class="btn btn-danger">Action</button>
+    					  	<button type="button" class="btn btn-danger" uib-dropdown-toggle>
+    					  		<span class="caret"></span>
+    					  	</button>
+    					  	<ul class="dropdown-menu" uib-dropdown-menu>
+    					  	  	<li role="menuitem"><a href="#">Action</a></li>
+    					  	  	<li role="menuitem"><a href="#">Another action</a></li>
+    					  	  	<li role="menuitem"><a href="#">Something else here</a></li>
+    					  	  	<li class="divider"></li>
+    					  	  	<li role="menuitem"><a href="#">Separated link</a></li>
+    					  	</ul>
+    					</div>
+						<!-- /Split button -->
+
 					</div>
 
+
 					<div class="col-sm-4">
-						<h3>well-lg</h3>
-						<div class="well well-lg">
-						  This is a large well.
-						</div>
+
+						<!-- Single button -->
+    					<div class="btn-group" uib-dropdown is-open="false">
+    						<button id="single-button" type="button" class="btn btn-success" uib-dropdown-toggle ng-disabled="true">
+    							Button (disabled) <span class="caret"></span>
+    						</button>
+    						<ul class="dropdown-menu" uib-dropdown-menu>
+    							<li role="menuitem"><a href="#">Action</a></li>
+    							<li role="menuitem"><a href="#">Another action</a></li>
+    							<li role="menuitem"><a href="#">Something else here</a></li>
+    							<li class="divider"></li>
+    							<li role="menuitem"><a href="#">Separated link</a></li>
+    						</ul>
+    					</div>
+						<!-- /Single button -->
+
 					</div>
-				</div>
 
-				<div class="row main-content">
-					<div class="col-sm-4">
-					<h3>Alerts</h3>
-
-					<p class="alert">just alert</p>
-					<p class="alert alert-success">success</p>
-					<p class="alert alert-info">info</p>
-					<p class="alert alert-warning">warning</p>
-					<p class="alert alert-danger">danger</p>
-
-					<hr>
-
-					<div uib-alert ng-class="'alert-' + (alert.type || 'success')" close="dismissAlert()" ng-hide="isAlertHidden">closing alert</div>
-				</div>
-				</div>
-
-
-
-
+				</section>
 
 			</div> <!-- /.container-fluid -->
 		</section>
@@ -176,7 +195,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min.js"></script>
-
 	<script src="/js/ng.js"></script>
 
 </body>
