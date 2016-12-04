@@ -2,14 +2,14 @@
 <html ng-app="clientApp">
 <head>
 	<meta charset="UTF-8">
-	<title>ngADMIN FLEX SM-Template</title>
+	<title>ngADMIN FLEX - Buttons</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/ngadmin-flex.css">
+	<link rel="stylesheet" type="text/css" href="/css/ngadmin-flex.css">
 
 </head>
 
@@ -43,7 +43,7 @@
 				  	  	<span class="caret"></span>
 				  	</button>
 				  	<ul class="dropdown-menu">
-				  		<li class="profile-image"><img src="./assets/img/user.jpg" class="img-responsive img-rounded"></li>
+				  		<li class="profile-image"><img src="../assets/img/user.jpg" class="img-responsive img-rounded"></li>
 				  	  	<li><a href="#">Profile</a></li>
 				  	  	<li><a href="#">Contacts</a></li>
 				  	  	<li><a href="#"></a></li>
@@ -61,27 +61,7 @@
 		<aside id="sidebar" ng-class="hidesidebarClass">
 
 			<div class="menu-section">
-				<h2>Template</h2>
-
-				<ul>
-					<li>
-						<a ng-click="toggleSidebarChild($event)">
-							<i class="fa fa-cog"></i>
-							Theme Elements
-							<span class="fa fa-chevron-down"></span>
-						</a>
-						<ul class="child">
-							<li><a href="/html/buttons.html" target="_blank">Buttons</a></li>
-							<li><a href="/html/form.html" target="_blank">Form Elements</a></li>
-							<li><a href="/html/tables.html" target="_blank">Tables</a></li>
-							<li><a href="/html/tabs.html" target="_blank">Tabs</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div><!-- /.menu-section -->
-
-			<div class="menu-section">
-				<h2>Menu Levels</h2>
+				<h2>Menu Section</h2>
 
 				<ul>
 
@@ -103,38 +83,6 @@
 					</li>
 					<!-- /ONE LEVEL MENU -->
 
-					<!-- MULTILEVEL MENU -->
-					<li>
-						<a ng-click="toggleSidebarChild($event)">
-							<i class="fa fa-sitemap"></i>
-							Multilevel Menu
-							<span class="fa fa-chevron-down"></span>
-						</a>
-						<ul class="child">
-							<li><a href="#">Simple Link</a></li>
-
-							<!-- grandchild menu 1 -->
-							<li class="grandchild active"> <!-- class="grandchild active" => menu opened -->
-								<a ng-click="toggleSidebarGrandChild($event)">Grandchild Menu 1 <span class="fa fa-angle-down"></span></a>
-								<ul>
-									<li><a href="#">Link 1.1</a></li>
-									<li><a href="#">Link 1.2</a></li>
-								</ul>
-							</li>
-
-							<!-- grandchild menu 2 -->
-							<li class="grandchild">
-								<a ng-click="toggleSidebarGrandChild($event)">Grandchild Menu 2 <span class="fa fa-angle-down"></span></a>
-								<ul>
-									<li><a href="#">Link 2.1</a></li>
-									<li><a href="#">Link 2.2</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<!-- /MULTILEVEL MENU -->
-
-
 					<!-- LINK -->
 					<li>
 						<a href="#">
@@ -149,62 +97,41 @@
 
 			</div> <!-- /.menu-section -->
 
-
-			<div class="menu-section">
-				<h2>Layouts</h2>
-
-				<ul>
-					<li>
-						<a href="/html/content-header.html" target="_blank">
-							<i class="fa fa-file-text-o"></i>
-							Content Header
-						</a>
-						<a href="/html/long-sidebar.html" target="_blank">
-							<i class="fa fa-file-text-o"></i>
-							Long Sidebar
-							<span class="badge pull-right" style="background-color:magenta"><i class="fa fa-exclamation-triangle"></i></span>
-						</a>
-						<a href="/html/long-content.html" target="_blank">
-							<i class="fa fa-file-text-o"></i>
-							Long Content
-							<span class="badge pull-right" style="background-color:green"><i class="fa fa-exclamation-triangle"></i></span>
-						</a>
-					</li>
-				</ul>
-			</div><!-- /.menu-section -->
-
 		</aside>
 
 
 		<!-- Content -->
 		<section id="content">
-
 			<div class="container-fluid">
-				<div class="row">
 
-					<div class="col-sm-5">
-						<h2>ngAdmin Flex <br><small>The best Angular1 free admin template!</small></h2>
-
-						<ul>
-							<li>gulp</li>
-							<li>sass/scss</li>
-							<li>bootstrap 3</li>
-							<li><b>CSS flexbox</b></li>
-							<li>angular 1.4+</li>
-							<li>pure CSS animations</li>
-							<li>jQuery not required</li>
-							<li>... and no other dependencies (very fast and optimized template)</li>
-						</ul>
-
+				<header class="row">
+					<div class="col-sm-7" id="heading">
+						<h2>Buttons</h2>
+						<p>
+							Responsive bootstrap buttons.
+						</p>
 					</div>
+					<div class="col-sm-5" id="page_links">
+						<ol class="breadcrumb">
+						  	<li><a href="/">Home</a></li>
+						  	<li class="active">Buttons</li>
+						</ol>
+					</div>
+				</header> <!-- /header -->
 
+				<section class="row main-content">
 					<div class="col-sm-7">
-						<img class="img img-responsive" style="width:50%" src="./assets/img/b-a.jpg" alt="Angular + Bootstrap Theme">
+						<a href="#" class="btn btn-default">Default</a>
+						<a href="#" class="btn btn-primary">Primary</a>
+						<a href="#" class="btn btn-success">Success</a>
+						<a href="#" class="btn btn-info">Info</a>
+						<a href="#" class="btn btn-warning">Warning</a>
+						<a href="#" class="btn btn-danger">Danger</a>
+						<a href="#" class="btn btn-link">Link</a>
 					</div>
-				</div> <!-- /.div.row -->
+				</section>
 
 			</div> <!-- /.container-fluid -->
-
 		</section>
 		<!-- /section#content -->
 

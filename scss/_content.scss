@@ -38,10 +38,14 @@
 
         }
 
-        & > section { //this is also .row
+        & > .main-content { //this is also .row
             // border:1px solid red;
             margin-top: 21px;
             color: $content-text-color2;
+
+            & h1,h2,h3,h4 {
+                color: lighten($content-text-color1, 8);
+            }
 
         }
     }

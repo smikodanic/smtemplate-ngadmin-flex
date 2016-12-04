@@ -2,7 +2,7 @@
 <html ng-app="clientApp">
 <head>
 	<meta charset="UTF-8">
-	<title>ngADMIN FLEX - Header &amp; Breadcrumb</title>
+	<title>ngADMIN FLEX - Foerm Elements</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -106,27 +106,69 @@
 
 				<header class="row">
 					<div class="col-sm-7" id="heading">
-						<h2>Content header</h2>
+						<h2>Form Elements</h2>
 						<p>
-							This page is showing heading with description and breadcrumb.
-							<br>Second row description.
+							Responsive, bootstrap form elements.
 						</p>
 					</div>
 					<div class="col-sm-5" id="page_links">
 						<ol class="breadcrumb">
-						  	<li><a href="#">Home</a></li>
-						  	<li><a href="#">Library</a></li>
-						  	<li class="active">Data</li>
+						  	<li><a href="/">Home</a></li>
+						  	<li class="active">Form</li>
 						</ol>
 					</div>
 				</header> <!-- /header -->
 
+
 				<section class="row main-content">
-					<div class="col-sm-12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At amet expedita aliquam dolores qui nam autem,
-						aspernatur maxime repellendus laborum numquam excepturi rem quaerat sit, corporis modi repellat
-						laudantium aliquid.</p>
+
+					<div class="col-sm-7">
+
+						<form action="#" class="form-horizontal">
+
+							<div class="form-group">
+								<label for="user" class="col-sm-3 control-label">Input:</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="user" placeholder="username">
+								</div>
+							</div>
+
+							<div class="form-group has-error">
+								<label for="pass" class="col-sm-3 control-label">Error:</label>
+								<div class="col-sm-9">
+									<input type="password" class="form-control" id="pass" placeholder="has-error">
+								</div>
+							</div>
+
+							<div class="checkbox">
+								<label class="col-sm-8  col-sm-push-3"><input type="checkbox"> checkbox</label>
+							</div>
+
+							<div class="radio">
+								<label class="col-sm-8  col-sm-push-3"><input type="radio"> radio button</label>
+							</div>
+
+							<div class="clearfix">&nbsp;</div><br>
+
+							<div class="form-group has-error">
+							    <div class="col-sm-5 col-sm-push-3">
+							    	<label for="p" class="control-label">Textarea (has-error):</label>
+							    	<textarea name="p" id="p" placeholder="Enter some text ..." class="form-control" style="height:130px;"></textarea>
+								</div>
+							</div>
+
+							<div class="clearfix">&nbsp;</div><br>
+
+							<div class="form-group">
+								<div class="col-sm-12 col-sm-push-3">
+									<button type="button" class="btn btn-primary">Login</button>
+								</div>
+							</div>
+
+						</form>
+
 					</div>
+
 				</section>
 
 			</div> <!-- /.container-fluid -->
