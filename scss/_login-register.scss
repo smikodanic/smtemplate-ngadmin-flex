@@ -1,14 +1,14 @@
 #login-register {
-	background-color: $content-bkg-color !important;
+	background-color: $body_bkg_color;
 	padding: 34px 0px;
 
-	& h4 {
+	& h1,h2,h3,h4 {
         // border: 1px solid red;
         line-height: 34px;
         margin-left: 21px;
 		text-transform: uppercase;
 		color: #888;
-        font-family: Roboto;
+        font-weight: 600;
 		text-shadow: 2px 2px #fcfcfc;
 
         & .fa {
