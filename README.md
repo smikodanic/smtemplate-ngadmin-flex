@@ -16,6 +16,7 @@ Excellent angular+bootstrap admin template with CSS flexbox as basic layout.
 - SASS compiler - scss files
 - Template is responsive and works very well on small screen sizes (tablets and smartphones).
 - Sidebar is hidden when browser's window width is <480.
+- Sidebar menu links will retain 'active' state after page is refreshed by browser's reload button (auto-active directive)
 - Tested and works well on Chrome 46+, Firefox 36+, Opera 36+ and MS Edge 20+.
 
 
